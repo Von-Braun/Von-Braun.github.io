@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box; 
+}
+body {
+  margin: 0;
+}
+#main {
+  display: flex;
+  min-height: calc(100vh - 4em);  /* fill entire page. 4em = header size */
+}
+#main > article {
+  background: #f5f1d6;
+  flex: 1;
+  word-break: break-word;  /* wrap text */
+}
+#main > nav {
+  background: #e3da9d;
+  height: auto;
+  width:12em;
+  text-align: center;
+  order: -1;
+}
+header {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+  background: #d5cc90;
+  height: 2em;
+  padding-left: 6em;  /* halve of nav width because header font=2em ??? */
+  font-size: 2em; 
+}
+article, nav {
+  padding: 1em;
+}
+a.sidebar:link, a.sidebar:visited {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+  background-color: #e3da9d;
+  color: black;
+  height: 1.4em;
+  margin: 0em;
+  text-decoration: none;
+}
+a.sidebar:hover, a.sidebar:active {
+  background-color: black;
+  color: white;
+}
+h3 { 
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
