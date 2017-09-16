@@ -3,6 +3,7 @@
   <head>
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="/layouts/main.css">
+    <link rel="import" href="/layouts/nav_text.html">
   </head>
   <body>
     <header><b>Home</b></header>
@@ -16,7 +17,10 @@
         <a class="sidebar" href="#tag2" color="#ffffff">example 2</a>
         <a class="sidebar" href="#tag3" color="#ffffff">example 3</a>
         <hr>
-        <div w3-include-html="/layouts/nav_text.html"></div> 
+        <script>
+          var getImport = document.quearySelector('link[rel=import]');
+          document.body.appendChild(document.importNode(getImport, true));
+        </script>
       </nav>
       
       <article>
