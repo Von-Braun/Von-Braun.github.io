@@ -1,2 +1,80 @@
-<meta http-equiv="refresh" content="0; url=/458.html" />
-<p><a href="/458.html">Redirect</a></p>
+<!doctype html>
+<html>
+  <head>
+    <title>My CPUs</title>
+    <link rel="stylesheet" type="text/css" href="/layouts/main.css">
+  </head>
+  <body>
+    <header><b>Home</b></header>
+    <header2></header2>
+    <div id="main">
+      <nav2></nav2>
+      <nav>
+        <a class="sidebar" href="index.html" color="#ffffff">Home</a>
+        <hr>
+        <h3>Page Contents</h3>
+        <a class="sidebar" href="#Scott_tag" color="#ffffff">Scott CPU</a>
+        <a class="sidebar" href="#RSSB_tag" color="#ffffff">RSSB</a>
+        <a class="sidebar" href="#IRWIN_tag" color="#ffffff">IRWIN 8</a>
+        <hr>
+        <h3>Hardware Projects</h3>
+        <a class="sidebar" href="/pages/cpu.html" color="#ffffff">Homebrew CPUs</a>
+        <a class="sidebar" href="/pages/mda.html" color="#ffffff">MDA monitor</a>
+        <a class="sidebar" href="/pages/ide.html" color="#ffffff">Arduino IDE</a>
+      <a class="sidebar" href="/pages/tapes.html" color="#ffffff">Random Tapes</a>
+        <hr>
+        <h3>Software Projects</h3>
+        <a class="sidebar" href="https://github.com/Von-Braun/Monitor" color="#ffffff">Monitor</a>
+        <a class="sidebar" href="https://github.com/Von-Braun/NTSB_bot" color="#ffffff">NTSB bot</a>
+        <a class="sidebar" href="https://github.com/Von-Braun/FMAPI" color="#ffffff">FMAPI</a>
+        <a class="sidebar" href="https://github.com/Von-Braun/Youtube_DL_GUI" color="#ffffff">Youtube_DL_GUI</a>
+        <a class="sidebar" href="https://github.com/Von-Braun?tab=repositories" color="#ffffff">more...</a>
+        <hr>
+        <a class="sidebar" href="/pages/pictures.html" color="#ffffff">Pictures</a>
+        <a class="sidebar" href="/pages/contact.html" color="#ffffff">Contact</a> 
+      </nav>
+      
+      <article>
+        <h1 id="homebrew_cpu">Homebrew_CPU</h1>
+        <p>A record of my homebrew cpu. If you have any questions, feel free to email me at gerardkoufax@gmail.com
+        </p><p>I was inspired to design and build my own CPU when I saw <a href="https://www.youtube.com/watch?v=cNN_tTXABUA">this video</a> and read the book it was based on, called <strong>But how do it know?</strong> I started by recreating the Scott CPU(described in the book) in minecraft. It worked if I recall correctly. Afterwards, I wanted to physically build it in real life, but after seeing how others had designed their own CPUs I chose to come up with my own design, thus the RSSB CPU was born(and torn to shreds a while later). The IRWIN 8 is my current design, and is partially constructed(the RAM module is complete); I'll hopefully finish it soon. The following is more detail on each CPU.</p>
+        
+        <h1 id="Scott_tag"><a name="Scott-CPU"></a>Scott CPU</h1>
+        <p>I don't currently have the computer or notebook that contain all the info on this CPUs construction, nor do I posses any images of what I built. I'll have them soon enough, however. So until then this section will be pretty sparse.</p>
+        <h1 id="RSSB_tag"><a name="RSSB"></a>RSSB</h1>
+        <p><img src="/images/RSSB_full.PNG" height="500"></p>
+        <h3 id="why">Why?</h3>
+        <p>I had decided on an OISC because I wanted something reasonably unique, or at least something with a quirk to it. I'd spent a long time working on the <a href="https://en.wikipedia.org/wiki/One_instruction_set_computer#Reverse_subtract_and_skip_if_borrow">RSSB CPU</a> and it got quite far into the construction stage as seen in the video immediately below.</p>
+        <p>However I made the mistake of not running it through enough tests(I only checked if output worked). That, coupled with the fact that I'm new to electronics, led to a design which never fully worked(MAR couldn't be read, making jumps difficult/impossible). As such, its parts were scrapped and used for other things.</p>
+        <p><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=ZtUAzJDu5UM" target="_blank"><img src="http://img.youtube.com/vi/ZtUAzJDu5UM/0.jpg" alt="RSSB CPU" width="240" height="180" border="10"></a></p>
+        <h3 id="specifications-how-did-the-rssb-cpu-workor-not-as-it-turned-out">Specifications: How Did The RSSB CPU Work(or not as it turned out)?</h3>
+        <p>Architecture: Harvard<br> ROM: 16-bit address(65536 cells), 8-bit data<br> RAM: 8-bit address(256 cells), 8-bit data<br> Type: <a href="https://en.wikipedia.org/wiki/One_instruction_set_computer">OISC(One instruction set computer)</a></p>
+        <ul>
+        <li>The CPU loops through the following sequence infinitely:<br></li>
+        </ul>
+        <ol>
+        <li>A = register or RAM_address #that's the english word or, not a logical or.<br></li>
+        <li>Acc = A - Acc<br></li>
+        <li>A = Acc<br></li>
+        <li>IAR = IAR + 1<br></li>
+        <li>If step 2 resulted in a negative number do: IAR = IAR + 1</li>
+        </ol>
+        <ul>
+        <li>The memory was mapped in the following way(the numbers are addresses):<br> 0 = IAR<br> 1 = IAR2<br> 2 = In<br> 3 = Out<br> 4 = Acc<br> 5 = Zero<br> 6 = NOP?<br> 7 = NOP?<br> Anything above 7 is treated as an address in RAM</li>
+        </ul>
+        <p>The circuit below is what's responible for the two parts above(i.e. the memory-mapping and 5-step-loop):</p>
+        <p><img src="/images/RSSB_CU.PNG" height="500"></p>
+        <h3 id="files">Files</h3>
+        <p><a href="/documents/RSSB_notes/code/RSSB%20emulater%20debug">RSSB-NEW.py:</a> a python 2 file that emulates the RSSB CPU. You can use it if you want to write programs for the machine. Being a one instruction computer, it can be quite difficult to program.</p>
+        <p><a href="/documents/RSSB_notes/circuits">un5_final.circ:</a> the circuit file made in a program called <a href="http://www.cburch.com/logisim/">logisim.</a> Note that you'll need logisim to open the files.</p>
+        <p><a href="/documents/RSSB_notes/code">More programs regarding the RSSB CPU</a></p>
+        <p>Finally, here's a program that calulates 2+2 and outputs it( It actually calculate 2-(0-2) ):</p>
+        <p><code>04 04 00 10 05 11 05 10 03 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 00 00</code></p>
+        <p>I think that about sums up the RSSB CPU so we'll move on to my new design.</p>
+        <h1 id="IRWIN_tag"><a name="Irwin-8"></a>IRWIN 8</h1>
+        <p><img src="https://github.com/Von-Braun/Homebrew_CPU/blob/master/RSSB%20notes/no_data.jpg" height="500"></p>
+      </article>
+
+    </div>
+  </body>
+</html>
