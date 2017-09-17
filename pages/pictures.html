@@ -34,8 +34,6 @@
       
       <article>
           	<script>
-				$(document).ready(function(){  
-
 				  function readMultipleFiles(evt) {
 				    //Retrieve all the files from the FileList object
 				    var files = evt.target.files; 
@@ -46,7 +44,7 @@
 				            r.onload = (function(f) {
 				                return function(e) {
 				                    var contents = e.target.result;
-				                    $('body').append('<h1>' + f.name + '</h1><img src="/images/' + f.name + '"/>');
+				                    $('article').append('<h1>' + f.name + '</h1><img src="/images/' + f.name + '"/>');
 				                };
 				            })(f);
 
@@ -58,8 +56,6 @@
 				  }
 
 				  document.getElementById('fileinput').addEventListener('change', readMultipleFiles, false);
-
-				});
 			</script>
       </article>
 
