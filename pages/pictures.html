@@ -1,2 +1,68 @@
-<meta http-equiv="refresh" content="0; url=/458.html" />
-<p><a href="/458.html">Redirect</a></p>
+<!doctype html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="/layouts/main.css">
+  </head>
+  <body>
+    <header><b>Home</b></header>
+    <div id="main">
+      
+      <nav>
+        <a class="sidebar" href="index.html" color="#ffffff">Home</a>
+        <hr>
+        <h3>Page Contents</h3>
+        <a class="sidebar" href="#tag1" color="#ffffff">example 1</a>
+        <a class="sidebar" href="#tag2" color="#ffffff">example 2</a>
+        <a class="sidebar" href="#tag3" color="#ffffff">example 3</a>
+        <hr>
+        <h3>Hardware Projects</h3>
+        <a class="sidebar" href="/pages/cpu.html" color="#ffffff">Homebrew CPUs</a>
+        <a class="sidebar" href="/pages/mda.html" color="#ffffff">MDA monitor</a>
+        <a class="sidebar" href="/pages/ide.html" color="#ffffff">Arduino IDE</a>
+        <hr>
+        <h3>Software Projects</h3>
+        <a class="sidebar" href="https://github.com/Von-Braun/Monitor" color="#ffffff">Monitor</a>
+        <a class="sidebar" href="https://github.com/Von-Braun/NTSB_bot" color="#ffffff">NTSB bot</a>
+        <a class="sidebar" href="https://github.com/Von-Braun/FMAPI" color="#ffffff">FMAPI</a>
+        <a class="sidebar" href="https://github.com/Von-Braun/Youtube_DL_GUI" color="#ffffff">Youtube_DL_GUI</a>
+        <a class="sidebar" href="https://github.com/Von-Braun?tab=repositories" color="#ffffff">more...</a>
+        <hr>
+        <a class="sidebar" href="/pages/pictures.html" color="#ffffff">Pictures</a>
+        <a class="sidebar" href="/pages/contact.html" color="#ffffff">Contact</a> 
+      </nav>
+      
+      <article>
+          	<script>
+				$(document).ready(function(){  
+
+				  function readMultipleFiles(evt) {
+				    //Retrieve all the files from the FileList object
+				    var files = evt.target.files; 
+
+				    if (files) {
+				        for (var i=0, f; f=files[i]; i++) {
+				              var r = new FileReader();
+				            r.onload = (function(f) {
+				                return function(e) {
+				                    var contents = e.target.result;
+				                    $('body').append('<h1>' + f.name + '</h1><img src="/images/' + f.name + '"/>');
+				                };
+				            })(f);
+
+				            r.readAsText(f);
+				        }   
+				    } else {
+				          alert("Failed to load files"); 
+				    }
+				  }
+
+				  document.getElementById('fileinput').addEventListener('change', readMultipleFiles, false);
+
+				});
+			</script>
+      </article>
+
+    </div>
+  </body>
+</html>
