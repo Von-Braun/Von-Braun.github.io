@@ -6,7 +6,7 @@ body {
 }
 #main {
   display: flex;
-  min-height: 100vh;  /* fill entire page
+  min-height: 100vh;  /* fill entire page */
 }
 #main > article {
   background: #f5f1d6;
