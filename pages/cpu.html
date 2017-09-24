@@ -6,11 +6,9 @@
   </head>
   <body>
     <header><b>Home</b></header>
-    <header2></header2>
     <div id="main">
-      <nav2></nav2>
       <nav>
-        <a class="sidebar" href="index.html" color="#ffffff">Home</a>
+        <a class="sidebar" href="/index.html" color="#ffffff">Home</a>
         <hr>
         <h3>Page Contents</h3>
         <a class="sidebar" href="#Scott_tag" color="#ffffff">Scott CPU</a>
@@ -21,7 +19,7 @@
         <a class="sidebar" href="/pages/cpu.html" color="#ffffff">Homebrew CPUs</a>
         <a class="sidebar" href="/pages/mda.html" color="#ffffff">MDA monitor</a>
         <a class="sidebar" href="/pages/ide.html" color="#ffffff">Arduino IDE</a>
-      <a class="sidebar" href="/pages/tapes.html" color="#ffffff">Random Tapes</a>
+        <a class="sidebar" href="/pages/tapes.html" color="#ffffff">Random Tapes</a>
         <hr>
         <h3>Software Projects</h3>
         <a class="sidebar" href="https://github.com/Von-Braun/Monitor" color="#ffffff">Monitor</a>
@@ -31,7 +29,6 @@
         <a class="sidebar" href="https://github.com/Von-Braun?tab=repositories" color="#ffffff">more...</a>
         <hr>
         <a class="sidebar" href="/pages/pictures.html" color="#ffffff">Pictures</a>
-        <a class="sidebar" href="/pages/contact.html" color="#ffffff">Contact</a> 
       </nav>
       
       <article>
@@ -39,9 +36,11 @@
         <p>A record of my homebrew cpu. If you have any questions, feel free to email me at gerardkoufax@gmail.com
         </p><p>I was inspired to design and build my own CPU when I saw <a href="https://www.youtube.com/watch?v=cNN_tTXABUA">this video</a> and read the book it was based on, called <strong>But how do it know?</strong> I started by recreating the Scott CPU(described in the book) in minecraft. It worked if I recall correctly. Afterwards, I wanted to physically build it in real life, but after seeing how others had designed their own CPUs I chose to come up with my own design, thus the RSSB CPU was born(and torn to shreds a while later). The IRWIN 8 is my current design, and is partially constructed(the RAM module is complete); I'll hopefully finish it soon. The following is more detail on each CPU.</p>
         
-        <h1 id="Scott_tag"><a name="Scott-CPU"></a>Scott CPU</h1>
+        <div id="Scott_tag"></div>
+        <h1><a name="Scott-CPU"></a>Scott CPU</h1>
         <p>I don't currently have the computer or notebook that contain all the info on this CPUs construction, nor do I posses any images of what I built. I'll have them soon enough, however. So until then this section will be pretty sparse.</p>
-        <h1 id="RSSB_tag"><a name="RSSB"></a>RSSB</h1>
+        <div id="RSSB_tag"></div>
+        <h1><a name="RSSB"></a>RSSB</h1>
         <p><img src="/images/RSSB_full.PNG" height="500"></p>
         <h3 id="why">Why?</h3>
         <p>I had decided on an OISC because I wanted something reasonably unique, or at least something with a quirk to it. I'd spent a long time working on the <a href="https://en.wikipedia.org/wiki/One_instruction_set_computer#Reverse_subtract_and_skip_if_borrow">RSSB CPU</a> and it got quite far into the construction stage as seen in the video immediately below.</p>
@@ -71,7 +70,8 @@
         <p>Finally, here's a program that calulates 2+2 and outputs it( It actually calculate 2-(0-2) ):</p>
         <p><code>04 04 00 10 05 11 05 10 03 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 00 00</code></p>
         <p>I think that about sums up the RSSB CPU so we'll move on to my new design.</p>
-        <h1 id="IRWIN_tag"><a name="Irwin-8"></a>IRWIN 8</h1>
+        <div id="IRWIN_tag"></div>
+        <h1><a name="Irwin-8"></a>IRWIN 8</h1>
         <p><img src="https://github.com/Von-Braun/Homebrew_CPU/blob/master/RSSB%20notes/no_data.jpg" height="500"></p>
       </article>
 
