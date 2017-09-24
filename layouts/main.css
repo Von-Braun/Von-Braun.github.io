@@ -12,6 +12,7 @@ body {
   background: #f5f1d6;
   flex: 1;
   word-break: break-word;  /* wrap text */
+  margin-left: 12em;
 }
 #main > nav {
   background: #e3da9d;
@@ -19,10 +20,6 @@ body {
   text-align: center;
   position:fixed;
   min-height: 100vh;
-}
-#main > nav2 {
-  order: -1;
-  width:12em;
 }
 header {
   display: flex;
@@ -41,6 +38,7 @@ header2 {
 }
 article, nav {
   padding: 1em;
+  margin-top: 3em;
 }
 a.sidebar:link, a.sidebar:visited {
   display: flex;
