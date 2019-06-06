@@ -1,92 +1,42 @@
-<!doctype html>
+<?xml version="1.0" encoding="UTF-8" ?>
 
-<title>458</title>
+<rss version="2.0">
 
-<link rel="stylesheet" type="text/css" href="/layouts/main.css">
+<channel>
 
-<link rel="stylesheet" type="text/css" href="/layouts/error.css">
+ <title>RSS Title</title>
 
-<html>
+ <description>This is an example of an RSS feed</description>
 
-<body>
+ <link>http://www.example.com/main.html</link>
 
-  <header><b>ERROR</b></header>
+ <lastBuildDate>Mon, 06 Sep 2010 00:01:00 +0000 </lastBuildDate>
 
-  <div id="main">
+ <pubDate>Sun, 06 Sep 2009 16:20:00 +0000</pubDate>
 
-    <nav>
+ <ttl>1800</ttl>
 
-      <a class="sidebar" href="/index.html" color="#ffffff">Home</a>
 
-      <hr>
 
-      <h3>Hardware Projects</h3>
+ <item>
 
-      <a class="sidebar" href="/pages/cpu.html" color="#ffffff">Homebrew CPUs</a>
+  <title>Example entry</title>
 
-      <a class="sidebar" href="/pages/mda.html" color="#ffffff">MDA monitor</a>
+  <description>Here is some text containing an interesting description.</description>
 
-      <a class="sidebar" href="/pages/ide.html" color="#ffffff">Arduino IDE</a>
+  <link>http://www.example.com/blog/post/1</link>
 
-      <a class="sidebar" href="/pages/tapes.html" color="#ffffff">Random Tapes</a>
+  <guid isPermaLink="false">7bd204c6-1655-4c27-aeee-53f933c5395f</guid>
 
-      <hr>
+  <pubDate>Sun, 06 Sep 2009 16:20:00 +0000</pubDate>
 
-      <h3>Software Projects</h3>
+ </item>
 
-      <a class="sidebar" href="https://github.com/Von-Braun/Monitor" color="#ffffff">Monitor</a>
 
-      <a class="sidebar" href="https://github.com/Von-Braun/NTSB_bot" color="#ffffff">NTSB bot</a>
 
-      <a class="sidebar" href="https://github.com/Von-Braun/FMAPI" color="#ffffff">FMAPI</a>
+</channel>
 
-      <a class="sidebar" href="https://github.com/Von-Braun/Youtube_DL_GUI" color="#ffffff">Youtube_DL_GUI</a>
+</rss>
 
-      <a class="sidebar" href="https://github.com/Von-Braun?tab=repositories" color="#ffffff">more...</a>
 
-      <hr>
-
-      <a class="sidebar" href="/pages/pictures.html" color="#ffffff">Pictures</a>
-
-    </nav>
-
-    
-
-    <article>
-
-      <h1>458</h1>
-
-      <hr width=50% NOSHADE>
-
-      This Page is under construction
-
-      <br>
-
-      <a id="back-link">Go Back</a>
-
-      <script>
-
-      var element = document.getElementById('back-link');
-
-      element.setAttribute('href', document.referrer);
-
-      element.onclick = function() {
-
-        history.back();
-
-      }
-
-      </script>
-
-      <br>
-
-      <img src="/images/felix2.png" title="I can fix it!">
-
-    </article>
-
-  </div>
-
-</body>
-
-</html>
 
